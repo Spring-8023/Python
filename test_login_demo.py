@@ -14,7 +14,7 @@ def Login():
     # # print self.url
     s = requests.Session()
     res = s.post(url=url, data=data)
-    print res.content
+    print(res.content)
     # # print ('-----')
     return s
 

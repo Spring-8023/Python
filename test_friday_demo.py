@@ -38,7 +38,7 @@ class TestFridayDemo(unittest.TestCase):
         }
         res = requests.request('POST', self.url, data=self.data)
         # result = res.json()
-        print res.content
+        print(res.content)
 
         # print json.dumps(result, ensure_ascii=False, indent=2)
 
@@ -49,18 +49,18 @@ class TestFridayDemo(unittest.TestCase):
         self.data = TestFridayDemo.d['login_data']['data']
         # print self.url, self.data
         # print globals()['url']
-        print TestFridayDemo.url
+        print(TestFridayDemo.url)
         res = TestFridayDemo.s.request('POST', url=self.url, data=self.data)
         # return TestFridayDemo.s
-        print res.content
+        print(res.content)
 
 
     def test_02_getList_By_Type(self):
         self.url = TestFridayDemo.d['treehole_data']['url']
         self.data = TestFridayDemo.d['treehole_data']['data']
-        print self.url
+        print(self.url)
         res = TestFridayDemo.s.request('POST', url=self.url, data=self.data)
-        print res.content
+        print(res.content)
 
 
 

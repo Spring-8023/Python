@@ -64,10 +64,10 @@ def listdir(path, list_name):   #  传入存储的list
     for file in os.listdir(path):
         file_path = os.path.join(path, file)
         if os.path.isdir(file_path):
-            print listdir(file_path, list_name)
+            print(listdir(file_path, list_name))
         else:
             list_name.append(file_path)
-            print list_name
+            print(list_name)
 
 def read_yaml(cur_path):
     file_path = file_name(cur_path)
@@ -75,10 +75,10 @@ def read_yaml(cur_path):
     # print f.read()
     d = yaml.load(f.read(), Loader=yaml.FullLoader)
     return d
-    print type(d)
-    print d['login_data']['url']
-    print d['other_data']['name']
-    print d.get('login_data').get('data')
+    print(type(d))
+    print(d['login_data']['url'])
+    print(d['other_data']['name'])
+    print(d.get('login_data').get('data'))
 
 
 def read_yaml2(cur_path):
@@ -87,10 +87,10 @@ def read_yaml2(cur_path):
     # print f.read()
     d = yaml.load(f.read(), Loader=yaml.FullLoader)
     return d
-    print type(d)
-    print d['login_data']['url']
-    print d['other_data']['name']
-    print d.get('login_data').get('data')
+    print(type(d))
+    print(d['login_data']['url'])
+    print(d['other_data']['name'])
+    print(d.get('login_data').get('data'))
 
 if __name__ == '__main__':
     # file_path = file_name(cur_path)
